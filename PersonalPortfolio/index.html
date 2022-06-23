@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YTTH Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+
+         <style>
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+:root {
+--ff-primary: 'Source Sans Pro', Tahoma;
+--ff-secondary: 'Source Code Pro', Lucida Console;
+
+--fw-reg: 300;
+--fw-bold: 900;
+    
+--clr-light: #fff;
+--clr-dark: #303030;
+--clr-accent: #E6E6FA;
+    
+--fs-h1: 3rem;
+--fs-h2: 2.25rem;
+--fs-h3: 1.25rem;
+--fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+:root {
+--fs-h1: 3.5rem;
+--fs-h2: 3.75rem;
+--fs-h3: 1.5rem;
+--fs-body: 1.125rem;
+
+--bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
+}
+}
+
+body {
+background: var(--clr-light);
+color: var(--clr-dark);
+margin: 0;
+font-family: var(--ff-primary);
+font-size: var(--fs-body);
+line-height: 1.6;
+}
+
+section {
+padding: 5em 2em;
+}
+
+img {
+display: block;
+max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+h1,
+h2,
+h3 {
+line-height: 1;
+margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+p { 
+position: relative;
+}
+
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: 15px;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+background: var(--clr-accent);
+padding: .25em 1em;
+font-family: var(--ff-secondary);
+margin-bottom: 1em;
+}
+
+nav { display: none; }
+
+/*  Intro section  */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+.intro {
+display: grid;
+width: min-content;
+margin: 0 auto;
+grid-column-gap: 1em;
+grid-template-areas: 
+"img title"
+"img subtitle";
+grid-template-columns: min-content max-content;
+}
+    
+.intro__img {
+grid-area: img;
+min-width: 200px;
+position: relative;
+z-index: 2;
+}    
+    
+.section__subtitle--intro {
+align-self: start;
+grid-column: -1 / 1;
+grid-row: 2;
+text-align: right;
+position: relative;
+left: -1.5em;
+width: calc(100% + 1.5em);
+    }
+}
+
+
+
+/*  About Me section  */
+.info {
+background-color: var(--clr-dark);
+background-image: linear-gradient(to right, var(--clr-dark), var(--clr-accent));
+color: var(--clr-light);
+text-align: center;
+    
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+h3 {
+        margin-left: 2em;
+        text-align: center;
+    }
+
+.grid-container {
+  display: grid;
+  gap: 50px;
+  justify-content: space-between;
+  align-content: space-between;
+  grid-template-columns: auto auto;
+  margin left: 2em;
+}
+
+/* Portfolio section */
+
+.my-portfolio {
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+    text-align: center;    
+}
+
+.section__subtitle--work {
+    color: #9370DB;
+    font-weight: var(--fw-bold);
+    margin-bottom: 1em;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3);
+}
+
+.portfolio__item {
+    background: var(--clr-accent);
+    overflow: hidden;
+    text-align: center;
+    font-size: 25px;
+}
+
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+        width: 350px;
+        height: 250px;
+        float: left; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        border: solid grey 3px;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+/* Footer section */
+
+.footer {
+    background-color: var(--clr-dark);
+    text-align: center;
+    color: var(--clr-accent);
+    padding: 2.5em 0;
+}
+
+.footer a { color: inherit }
+
+.footer__link:hover {
+   color: var(--clr-light);
+}
+
+h4 { 
+   font-size: 30px;
+   text-align: center;
+}
+
+a { font-size: 20px; }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+         </style>
+
+    </head>
+    <body>
+       <header>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>
+                </ul>
+            </nav>
+        </header>
+
+                                <!-- Introduction -->
+
+          <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi! I am <strong>Yelena Therese T. Honculada</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Hi everyone! I am a student from RTPM-DSHS hoping to improve my coding skills.</p>
+            <img src="manginasalpic1.jpg" alt="Picture of me:)" class="intro__img">
+          </section>
+                                
+                                <!-- About Me -->
+
+        <section class="info" id="about">
+            <h2 class="section__title section__title--aboutme">About Me</h2>
+<br>
+            <div class="grid-container">
+             <div>
+                   <h3>Basic Info</h3>	
+                     <p> My full name is Yelena Therese T. Honculada, I am 13 years old. My Nationality is Filipino and I live in Bacong, Neg. Or. I also study in RTPM- Dumaguete Science High School as a Grade 8 student. </p>
+                </div> <!-- / basics -->
+               
+             <div>
+                    <h3 style="color:var(--clr-dark)">Hobbies & Favorites</h3>
+<br>
+                      <p style="color:var(--clr-dark)"> My hobbies are Singing, Dancing and Watching Movies. My talents are Singing and Dancing and my skills are Playing the Piano, Creative and Problem-solving. Favorite food are Lumpia and Bacon and Favorite subject are Math and Science. </p>
+                </div> <!-- / Hobbies-Favs -->
+            </div> <!-- / About Me -->
+           </div>
+        </section>
+
+                                <!-- Portfolio -->
+
+        <section class="my-portfolio" id="work">
+            <h2 class="section__title section__title--work">My Portfolio</h2>
+            <p class="section__subtitle section__subtitle--work">1st Quarter - 4th Quarter</p>
+            
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="file:///C:/Users/Nina%20Honculada/Dropbox/My%20PC%20(DESKTOP-ONRTGGF)/Documents/8-Einstien/ICT%20-%20Sir.%20Dayao/HTML%20projects/Finalminiresume.html" class="portfolio__item" target="_blank"> Mini Resume </a>
+                <img src="miniresume.png" alt="Mini Resume" class="portfolio__img">
+<br>                
+                <!-- Portfolio item 02 -->
+                <a href="file:///C:/Users/Nina%20Honculada/Dropbox/My%20PC%20(DESKTOP-ONRTGGF)/Documents/8-Einstien/ICT%20-%20Sir.%20Dayao/HTML%20projects/dice2.html" class="portfolio__item" target="_blank"> Dice </a>
+                    <img src="dicesides.png" alt="Dice" class="portfolio__img">
+<br>                
+                <!-- Portfolio item 03 -->
+                <a href="file:///C:/Users/Nina%20Honculada/Dropbox/My%20PC%20(DESKTOP-ONRTGGF)/Documents/8-Einstien/ICT%20-%20Sir.%20Dayao/HTML%20projects/tables.html" class="portfolio__item"  target="_blank"> Tables </a>
+                    <img src="tablesact.png" alt="Tables" class="portfolio__img">
+<br>                
+                <!-- Portfolio item 04 -->
+                <a href="file:///C:/Users/Nina%20Honculada/Dropbox/My%20PC%20(DESKTOP-ONRTGGF)/Documents/8-Einstien/ICT%20-%20Sir.%20Dayao/HTML%20projects/flags.html" class="portfolio__item" target="_blank"> Flags </a>
+                    <img src="flags.png" alt="Flags" class="portfolio__img">
+<br>                
+                <!-- Portfolio item 05 -->
+                <a href="file:///C:/Users/Nina%20Honculada/Dropbox/My%20PC%20(DESKTOP-ONRTGGF)/Documents/8-Einstien/ICT%20-%20Sir.%20Dayao/HTML%20projects/Q3act2.html" class="portfolio__item" target="_blank"> Tourist Spots in The Philippines </a>
+                    <img src="hoverover.png" alt="Tourist Spots" class="portfolio__img">
+<br>                
+                <!-- Portfolio item 06 -->
+                <a href="file:///C:/Users/Nina%20Honculada/Dropbox/My%20PC%20(DESKTOP-ONRTGGF)/Documents/8-Einstien/ICT%20-%20Sir.%20Dayao/HTML%20projects/.html" class="portfolio__item" target="_blank"> Hello World! </a>
+                    <img src="helloworld.png" alt="Hello World!" class="portfolio__img">   
+            </div>       
+        </section>
+
+                                <!-- Footer -->
+        <footer class="footer">
+            <h4 class="footer-header"> Contacts </h4>  
+<hr>
+<br>    
+            <img src="fb.png" width="50 height="50" class="center"><a href="https://www.facebook.com/yelenatherese.honculada/"             target="_blank" class="footer__link">Facebook Profile</a>
+<br>
+<br>
+            <img src="gmail.png" width="50" height="50" class="center"> <p>ninahonculada@gmail.com</p>
+<br>
+            <img src="calling.png" width="50" height="50" class="center"> <p>09232946524</p>
+        </footer>
+
+
+    </body>
+</html>

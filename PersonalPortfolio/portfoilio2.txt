@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YTTH Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+
+         <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+}
+
+            :root {
+                 --ff-primary: Source Sans Pro, sans-serif;
+                 --ff-secondary: Source Code Pro, monospace;
+
+                 --fw-reg: 300;
+                 --fw-bold: 900;
+    
+                 --clr-light: #fff;
+                 --clr-dark: #303030;
+                 --clr-accent: #16e0bd;
+    
+                 --fs-h1: 3rem;
+                 --fs-h2: 2.25rem;
+                 --fs-h3: 1.25rem;
+                 --fs-body: 1rem;
+}
+            :root {
+                 --fs-h1: 4.5rem;
+                 --fs-h2: 3.75rem;
+                 --fs-h3: 1.5rem;
+                 --fs-body: 1.125rem;
+}
+
+            body {
+                 background: var(--clr-light);
+                 color: var(--clr-dark);
+                 margin: 0;
+                 font-family: var(--ff-primary);
+                 font-size: var(--fs-body);
+                 line-height: 1.6;
+}
+
+            img {
+                 display: block;
+                 max-width: 100%;
+}
+
+            h1,
+            h2,
+            h3 {
+                 line-height: 1.1;
+                 margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+         </style>
+
+    </head>
+    <body>
+       <header>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>
+                </ul>
+            </nav>
+        </header>
+
+                            <!-- Introduction -->
+
+          <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi! I am <strong>Yelena Therese T. Honculada</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="img/selfpicture.jpg" alt="Picture of me:)">
+          </section>
+
+                              <!-- About Me -->
+        <section class="info" id="about">
+            <h2 class="section__title section__title--services">About Me</h2>
+            <div class="Basic Info">
+                <div class="Info">
+                    <h3>Basic Info</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> <!-- / basics -->
+                
+                <div class="Info">
+                    <<h3>Hobbies & Favorites</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> <!-- / Hobbies -->
+            </div> <!-- / About Me -->
+        </section>
+
+                                <!-- Portfolio -->
+        <section class="my-work" id="work">
+            <h2 class="section__title">My Portfolio</h2>
+            <p class="section__subtitle">From 1st Quarter ~ 4th Quarter</p>
+            
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-01.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 02 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-02.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 03 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-03.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 04 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-04.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 05 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-05.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 06 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-06.jpg" alt="" class="portfolio__img">
+                </a>           
+        </section>
+
+                                 <!-- Footer -->
+        <footer>
+            <a href="ninahonculada@gmail.com" class="footer-link">ninahonculada@gmail.com</a>
+        </footer>
+
+    </body>
+</html>
